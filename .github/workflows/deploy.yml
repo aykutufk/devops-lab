@@ -29,6 +29,7 @@ jobs:
           script: |
             echo "Baglanti basarili! Guncelleme basliyor..."
             cd /var/www/html
-            git pull
+            git fetch --all
+            git reset --hard origin/master
             docker restart capstone-website
             echo "Guncelleme tamamlandi!"
